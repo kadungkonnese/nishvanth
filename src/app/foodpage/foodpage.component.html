@@ -1,0 +1,20 @@
+<div class="container">
+  <img [src]="food.imageUrl" [alt]="food.name">
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{food.name}}
+
+      </span>
+      <span class="favourite {{food.favourite?'':'not'}}">
+        <i class="fa-solid fa-heart"></i>
+      </span>
+    </div>
+    <div class="price">
+      <span>
+        {{food.price|currency}}
+      </span>
+    </div>
+    <button (click)="addToCart()">Add to Cart</button>
+  </div>
+</div>

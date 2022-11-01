@@ -1,0 +1,410 @@
+<div class="navbar navbar-light bg-light">
+    
+  <div class="navbar-brand align-item-center d-flex">
+   
+    <div class="dropDown">
+          <div class="dropDown1">
+            <div ngbDropdown class="d-inline-block">
+              <button type="button" class="btn btn" id="dropdownBasic1" ngbDropdownToggle>
+                Shop by Gold Jewellery
+              </button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <div class="d-flex">
+                  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+                    <li ngbNavItem="top">
+                      <a ngbNavLink>Earrings</a>
+                      <ng-template ngbNavContent>
+                        <ul>
+                          <li *ngFor="let food of foods">
+                            <a routerLink="/food/{{food.id}}">
+                              
+                              <img src="{{food.imageUrl}}" alt="">
+                              <div class="content">
+                                <div class="name">
+                                  {{food.name}}
+                                </div>
+                                <span class="favourite {{food.favourite?'':'not'}}">
+                                  <i class="fa-solid fa-heart"></i>
+                                </span>
+                                <div class="stars">
+                                  <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="18px" [readonly]="true" ></star-rating>
+                        
+                                </div>
+                                
+                              </div>
+                              <div class="price">
+                                <span>
+                                  {{food.price|currency}}
+                                </span>
+                              </div>
+                        
+                            </a>
+                           
+                          </li>
+                        </ul>
+                      </ng-template>
+                    </li>
+                    <li ngbNavItem="middle">
+                      <a ngbNavLink>Rings</a>
+                      <ng-template ngbNavContent>
+                        <ul>
+                          <li *ngFor="let ring of rings">
+                            <a routerLink="/ring/{{ring.id}}">
+                              <img src="{{ring.imageUrl}}" alt="">
+                              <div class="content">
+                                <div class="name">
+                                  {{ring.name}}
+                                </div>
+                                
+                              </div>
+                              <div class="price">
+                                <span>
+                                  {{ring.price|currency}}
+                                </span>
+                              </div>
+                        
+                            </a>
+                          
+                          </li>
+                        </ul>
+                      </ng-template>
+                    </li>
+                    <li ngbNavItem="bottom">
+                      <a ngbNavLink>Necklaces</a>
+                      <ng-template ngbNavContent>
+                        <ul>
+                          <li *ngFor="let neck of necklaces">
+                            <a routerLink="/food/{{neck.id}}">
+                              <img src="{{neck.imageUrl}}" alt="">
+                              <div class="content">
+                                <div class="name">
+                                  {{neck.name}}
+                                </div>
+                                
+                              </div>
+                              <div class="price">
+                                <span>
+                                  {{neck.price|currency}}
+                                </span>
+                              </div>
+                        
+                            </a>
+                          
+                          </li>
+                        </ul>
+                      </ng-template>
+                    </li>
+                  </ul>
+                
+                  <div [ngbNavOutlet]="nav" class="ms-4"></div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+         
+          <div class="dropDown2">
+            <div style="border: none" ngbDropdown class="d-inline-block">
+              <button type="button" class="btn btn"  id="dropdownBasic1" ngbDropdownToggle>
+                Shop by Diamond Jewellery
+              </button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem>American Diamond </button>
+                <button ngbDropdownItem>Stone Jewellery</button>
+              
+              </div>
+            </div>
+          
+        </div>
+      </div>
+  </div>
+<div class="text">
+  
+    <h5>Free 1-2 Day Shipping over $50</h5>
+    
+   
+    
+  
+</div>
+  </div>
+
+
+<ngb-carousel *ngIf="images">
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img [src]="images[0]" alt="Random first slide" />
+		</div>
+		
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img [src]="images[1]" alt="Random second slide" />
+		</div>
+		
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img [src]="images[2]" alt="Random third slide" />
+		</div>
+	
+	</ng-template>
+</ngb-carousel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<ul>
+  <li *ngFor="let food of foods">
+    <a routerLink="/food/{{food.id}}">
+      
+      <img src="{{food.imageUrl}}" alt="">
+      <div class="content">
+        <div class="name">
+          {{food.name}}
+        </div>
+        <span class="favourite {{food.favourite?'':'not'}}">
+          <i class="fa-solid fa-heart"></i>
+        </span>
+        <div class="stars">
+          <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="18px" [readonly]="true" ></star-rating>
+
+        </div>
+        
+      </div>
+      <div class="price">
+        <span>
+          {{food.price|currency}}
+        </span>
+      </div>
+
+    </a>
+   
+  </li>
+</ul> -->
+
+<!-- 
+<ul>
+  <li *ngFor="let neck of necklaces">
+    <a routerLink="/food/{{neck.id}}">
+      <img src="{{neck.imageUrl}}" alt="">
+      <div class="content">
+        <div class="name">
+          {{neck.name}}
+        </div>
+        
+      </div>
+      <div class="price">
+        <span>
+          {{neck.price|currency}}
+        </span>
+      </div>
+
+    </a>
+  
+  </li>
+</ul> -->

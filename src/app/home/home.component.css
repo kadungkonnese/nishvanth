@@ -1,0 +1,77 @@
+ul{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li a{
+
+  width: 200px;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+}
+
+li a:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.content{
+  padding: .5rem 1rem;
+  position: relative;
+}
+
+.favourite{
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+.favourite.not{
+  color: grey;
+}
+
+.price{
+  color: #414141;
+  margin-left: 1.1rem;
+}
+
+
+.dropDown1 {
+  display: inline;
+  
+
+}
+
+.dropDown2{
+  display: inline;
+ 
+  
+}
+
+.dropDown{
+display: block;
+  
+}
+.text{
+  margin-right: 80px;
+}
+
+.picsum-img-wrapper img{
+  display: flex;
+  width: 1500px;
+  height: 500px;
+}
+
+h5{
+  color: rgb(121, 110, 110);
+}

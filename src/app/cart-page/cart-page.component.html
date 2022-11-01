@@ -1,0 +1,63 @@
+
+<app-not-found [visible]="!cart || cart.items.length <=0"
+  notFoundMessage="Your Shopping Bag is Empty"
+  resetLinkText="Continue Shopping">
+</app-not-found>
+<div *ngIf="cart && cart.items.length >0" class="container-one">
+
+  <ul>
+    <li *ngFor="let cartItem of cart.items">
+      <div>
+        <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+      </div>
+      <div>
+        <a href=""></a>
+      </div>
+      <div>
+        <a routerLink="/food/{{cartItem.food.id}}">
+          {{cartItem.food.name}}
+        </a>
+      </div>
+      <div class="price">
+        {{cartItem.price| currency}}
+      </div>
+      <div>
+        <button class="remove-button" (click)="removeFromCart(cartItem)">
+          Remove
+        </button>
+      </div>
+    </li>
+  </ul>
+
+
+</div>
+<div class="container-two">
+
+  <ul>
+    <li *ngFor="let cartItem of cart1.items">
+      <div>
+        <img [src]="cartItem.ring.imageUrl" [alt]="cartItem.ring.name">
+      </div>
+      <div>
+        <a href=""></a>
+      </div>
+      <div>
+        <a routerLink="/food/{{cartItem.ring.id}}">
+          {{cartItem.ring.name}}
+        </a>
+      </div>
+      <div class="price">
+        {{cartItem.price| currency}}
+      </div>
+      <div>
+        <!-- <button class="remove-button" (click)="removeFromCart(cartItem)">
+          Remove
+        </button> -->
+      </div>
+    </li>
+  </ul>
+
+
+</div>
+
+
